@@ -1,13 +1,13 @@
 /*eslint prefer-rest-params: "off"*/
 import Annotation from "./Annotation";
+import Immutable from "./Immutable";
 import Brain from "./bugeye/eventbus/Brain";
 import LogRecord from "./bugeye/eventbus/common/LogRecord";
 
+@Immutable
 class Log implements Annotation<MethodDecorator> {
 
     public decorator(): MethodDecorator {
-        Brain.instance()
-            .learn(LogRecord, new LogRecord(this.constructor.name));
         return this.learnMethodApply;
     }
 

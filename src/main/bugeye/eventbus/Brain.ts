@@ -1,5 +1,7 @@
 import Neuron from "./Neuron";
+import Immutable from "../../Immutable";
 
+@Immutable
 export default class Brain {
 
     private static singleInstance: Brain;
@@ -40,7 +42,7 @@ export default class Brain {
     /**
      * Stores neuron in memory associated with the signal.
      */
-    public learn(signal: object, neuron: Neuron) {
+    public learn(signal: object, neuron: Neuron): Brain {
         this.cerebrumMemory(signal).push(neuron);
         return this;
     }

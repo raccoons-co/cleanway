@@ -6,6 +6,7 @@
  *
  * @example
  * ```ts
+ * @Immutable
  * export default class YourTest {
  *
  *     @Log
@@ -22,15 +23,15 @@
 import Brain from "./bugeye/eventbus/Brain";
 import BrainException from "./bugeye/eventbus/common/BrainException";
 import CleanWayBuilder from "./CleanWayBuilder";
+import Immutable from "./Immutable";
 import Log from "./Log";
 import Test from "./Test";
-import Immutable from "./Immutable";
 
 export {
     Brain,
     BrainException,
     CleanWayBuilder,
+    Immutable,
     Log,
-    Test,
-    Immutable
+    Test
 }
